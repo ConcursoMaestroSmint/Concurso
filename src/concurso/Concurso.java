@@ -5,8 +5,8 @@ import java.util.Random;
 
 public class Concurso {
 	
-	ArrayList<Jugador> participantes=new ArrayList<Jugador>();
-	ArrayList<Jugador> ganadores=new ArrayList<Jugador>();
+	ArrayList<Participante> participantes=new ArrayList<Participante>();
+	ArrayList<Participante> ganadores=new ArrayList<Participante>();
 
 	Concurso(){
 		Pablo pablo = new Pablo();
@@ -47,7 +47,7 @@ public class Concurso {
 		Random rnd=new Random();
 		int numero, i;
 		final byte NUMRONDAS=5;
-		Jugador jugador1, jugador2;
+		Participante jugador1, jugador2;
 		
 		numero = rnd.nextInt(participantes.size());
 		jugador1 = participantes.get(numero);
