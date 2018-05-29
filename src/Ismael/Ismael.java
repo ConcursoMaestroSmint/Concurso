@@ -1,5 +1,7 @@
 package Ismael;
 
+import concurso.Participante;
+
 public class Ismael extends Participante{
 
 	Maquina maquina = new Maquina(Modos.DIFICIL);
@@ -11,7 +13,6 @@ public class Ismael extends Participante{
 		Combinacion aux = new Combinacion(Modos.DIFICIL);
 		
 		aux = maquina.IA(tablero);
-		
 		tablero.añadirAlTablero(aux, traducirByte(resultado));
 		
 		for (int i=0; i<Modos.DIFICIL.getCasillas();i++) {
@@ -22,7 +23,6 @@ public class Ismael extends Participante{
 
 	@Override
 	public byte[] crearCombSecreta() {
-
 		byte comb[] = new byte[Modos.DIFICIL.getCasillas()];
 		Combinacion aux = new Combinacion(Modos.DIFICIL);
 		
@@ -36,7 +36,6 @@ public class Ismael extends Participante{
 
 	
 	
-	@SuppressWarnings("unused")
 	private byte traducirColor(String color) {
 		byte traduccion = 0;
 
@@ -76,7 +75,6 @@ public class Ismael extends Participante{
 		return traduccion;
 	}
 	
-	@SuppressWarnings("unused")
 	private Combinacion traducirByte(byte num[]) {
 		Combinacion comb = new Combinacion(Modos.DIFICIL);
 		int i;
@@ -99,7 +97,6 @@ public class Ismael extends Participante{
 		return comb;
 	}
 	
-	
-	
+		
 	
 }

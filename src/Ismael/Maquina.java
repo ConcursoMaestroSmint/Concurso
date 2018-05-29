@@ -432,9 +432,10 @@ public class Maquina extends Jugador {
 				} while (negro + rojo + verde + amarillo + azul + morado + celeste + blanco + verdeclaro + rosa != 0);
 
 			} else {
+				
 				do {
 					auxRand = generarColorRandom();
-				} while (lista.contains(auxRand));
+				} while (lista.contains(auxRand) && lista.size() < 10);
 
 				for (int k = 0; k < getModo().getCasillas(); k++) {
 					comb.getCombinacion()[k] = new Casilla(auxRand);
