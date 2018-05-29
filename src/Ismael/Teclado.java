@@ -1,5 +1,4 @@
-
-package main;
+package Ismael;
 
 import java.util.InputMismatchException;
 import java.util.NoSuchElementException;

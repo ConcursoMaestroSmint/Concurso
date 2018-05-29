@@ -1,4 +1,4 @@
-package main;
+package Ismael;
 
 /**
  * Esta interfaz contiene un método abstracto para dibujar, por consola, el tablero

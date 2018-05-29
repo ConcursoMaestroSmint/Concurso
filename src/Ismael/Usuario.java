@@ -1,7 +1,7 @@
-package main;
+package Ismael;
 
 import java.util.ArrayList;
-import main.Teclado.enummaximominimo;
+import Ismael.Teclado.enummaximominimo;
 
 /**
  * Esta clase tiene los mismos atributos que su padre, representa al usuario humano que juega

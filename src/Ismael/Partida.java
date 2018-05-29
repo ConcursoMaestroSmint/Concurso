@@ -1,6 +1,6 @@
-package main;
+package Ismael;
 
-import main.Teclado.enummaximominimo;
+import Ismael.Teclado.enummaximominimo;
 
 /**
  * Esta clase almacena 2 objetos Jugador, 2 objetos Tablero y un enum Modos, es la clase principal del programa

@@ -1,4 +1,4 @@
-package main;
+package Ismael;
 
 /**
  * Esta clase almacena una cadena que contendrá los colores

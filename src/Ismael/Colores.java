@@ -1,4 +1,4 @@
-package main;
+package Ismael;
 
 /**
  * Esta clase almacena 10 atributos String estáticos con colores asignados y un color para resetear el estilo

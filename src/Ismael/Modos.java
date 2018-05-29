@@ -1,4 +1,4 @@
-package main;
+package Ismael;
 
 /**
  * Este enum almacena el número de casillas y el número de colores de los distintos modos de juego

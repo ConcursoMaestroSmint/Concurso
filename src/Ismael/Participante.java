@@ -1,4 +1,4 @@
-package main;
+package Ismael;
 
 public abstract class Participante {
 
