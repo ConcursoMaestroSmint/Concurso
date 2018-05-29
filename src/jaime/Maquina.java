@@ -1,4 +1,4 @@
-package mastermind;
+package jaime;
 
 import java.util.ArrayList;
 import java.util.Random;

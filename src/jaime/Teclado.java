@@ -1,4 +1,4 @@
-package mastermind;
+package jaime;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

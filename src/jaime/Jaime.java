@@ -1,4 +1,4 @@
-package mastermind;
+package jaime;
 
 public class Jaime {
 
@@ -83,18 +83,5 @@ public class Jaime {
 		return comb;
 	}
 	
-	public static void main(String[] args) {
-		Maquina m = null ;
-		Jaime j = new Jaime(m);
-		Combinacion c = new Combinacion(Dificultad.INDIVIDUAL);
-		byte color = 0 ;
-		byte[] comb = new byte[Dificultad.INDIVIDUAL.getCasilla()];
-
-		comb = j.crearCombSecreta();
-		
-		for(int i=0;i<comb.length;i++) {
-			System.out.println(comb[i]);
-		}
-	}
 
 }

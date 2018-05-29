@@ -1,4 +1,5 @@
-package mastermind;
+package jaime;
+
 /**
  *	Almacena el menu del juego
  * 

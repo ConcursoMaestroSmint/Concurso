@@ -1,4 +1,4 @@
-package mastermind;
+package jaime;
 
 public class Demo {
 

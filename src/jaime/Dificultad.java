@@ -1,4 +1,4 @@
-package mastermind;
+package jaime;
 /**
  * Almacena la dificultad de cada modo, asi como sus correspondientes casillas, colores, intentos
  *  y si tiene o no repeticion de colores
