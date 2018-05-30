@@ -6,6 +6,7 @@ import aleDiaz.AleDiaz;
 import aleSanchez.AleSanchez;
 import esther.Esther;
 import ismael.Ismael;
+import jaime.Jaime;
 import lidia.Lidia;
 import lolo.Lolo;
 import maria.Maria;
@@ -44,7 +45,7 @@ public class Partida {
 	
 	private Participante seleccionaJugadores(String participanteString) {
 		Participante jugador;
-		jugador = new Ismael();
+		jugador = new Jaime();
 		/*
 		switch(participanteString) {
 		case "Pablo":

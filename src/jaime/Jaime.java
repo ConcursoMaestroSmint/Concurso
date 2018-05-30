@@ -1,34 +1,25 @@
 package jaime;
 
-public class Jaime {
 
-	Maquina maquina;
+import concurso.Participante;
+
+public class Jaime extends Participante{
+
+	
 	Dificultad dificultad = Dificultad.AUTOMATICO;
+	private Maquina maquina;
 	byte[] combinacionConvertida;
-	//Tablero tablero = new Tablero();
 	
-	Ficha ficha;
 	
-	Jaime(Maquina maquina){
+	public Jaime(){
 		maquina = new Maquina(dificultad);
 	}
 	
-	public byte[] crearCombRespuesta() {
-		byte[] comb = new byte[dificultad.getCasilla()];
-		Combinacion aux = new Combinacion(dificultad);
-		maquina = new Maquina(dificultad);
-		aux = maquina.IAConcurso();
-		
-		comb = convertir(aux);
-		
-		
-		return comb;
-	}
+
 	
 	public byte[] crearCombSecreta() {
 		byte[] comb = new byte[dificultad.getCasilla()];
 		Combinacion aux = new Combinacion(dificultad);
-		maquina = new Maquina(dificultad);
 		
 		aux = maquina.IAConcurso();
 		
@@ -79,6 +70,20 @@ public class Jaime {
 			}
 			comb[i] = color;
 		}
+		
+		return comb;
+	}
+
+	@Override
+	public byte[] crearCombPropuesta() {
+		
+		byte[] comb = new byte[dificultad.getCasilla()];
+		Combinacion aux = new Combinacion(dificultad);
+		
+		aux = maquina.IAConcurso();
+		
+		comb = convertir(aux);
+		
 		
 		return comb;
 	}
