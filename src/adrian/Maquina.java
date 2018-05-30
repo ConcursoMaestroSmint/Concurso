@@ -1,4 +1,4 @@
-﻿package adrian;
+package adrian;
 
 import static adrian.Colores.*;
 
@@ -153,7 +153,8 @@ public class Maquina extends Jugador {
 		Ficha fichaBlanca = new Ficha();
 		ArrayList<Combinacion> combis = new ArrayList<>();
 		ArrayList<Ficha> coloresAcertados = new ArrayList<>();
-
+		ArrayList<Ficha> coloresAcertados2 = new ArrayList<>();
+		
 		fichaNegra.setColor(NEGRO + (char) 9210 + RESET);
 		fichaRoja.setColor(ROJO + (char) 9210 + RESET);
 		fichaBlanca.setColor(BLANCO + (char) 9210 + RESET);
@@ -183,7 +184,7 @@ public class Maquina extends Jugador {
 					for (i = 0; i < modo.getNumCasillas(); i++) {
 						combinacion.getCasillas()[i] = ficha;
 					}
-					if (combis.contains(combinacion)) {
+					if (combis.contains(combinacion) && combis.size() < 10) {
 						repetir = true;
 					} else {
 						repetir = false;
@@ -193,6 +194,7 @@ public class Maquina extends Jugador {
 				// Ya están encontrados todos los colores, ahora solo falta colocarlos en las
 				// posiciones correctas
 				combis=new ArrayList<>();
+				coloresAcertados2.addAll(coloresAcertados);
 				for (i = 0; i < tablero.getTablero().size(); i++) {
 					combis.add(tablero.getTablero().get(i).getCombinacion());
 				}
@@ -201,7 +203,9 @@ public class Maquina extends Jugador {
 					aleatorio = rnd.nextInt(coloresAcertados.size());
 					combinacion.getCasillas()[i] = coloresAcertados.get(aleatorio);
 					coloresAcertados.remove(aleatorio);
+					
 				}
+				coloresAcertados.addAll(coloresAcertados2);
 				}while(combis.contains(combinacion));
 			}
 		}

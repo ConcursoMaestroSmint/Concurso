@@ -5,7 +5,7 @@ import static adrian.Colores.*;
 import concurso.Participante;
 
 public class Adrian extends Participante {
-	private TableroJugador tablero;
+	private TableroJugador tablero ;
 	private Maquina maquina;
 
 	public Adrian() {
@@ -15,6 +15,7 @@ public class Adrian extends Participante {
 
 	@Override
 	public byte[] crearCombPropuesta() {
+		
 		int i;
 		Jugada jugada = new Jugada(Modos.Dificil);
 		byte[] combinacion = new byte[Modos.Dificil.getNumCasillas()];
@@ -28,7 +29,7 @@ public class Adrian extends Participante {
 
 	}
 
-	@Override
+
 	public byte[] crearCombSecreta() {
 		int i;
 		byte[] combinacion = new byte[Modos.Dificil.getNumCasillas()];
@@ -79,26 +80,31 @@ public class Adrian extends Participante {
 
 	private Combinacion traducirByteString(byte[] resultado) {
 		int i;
-		Combinacion respuesta = new Combinacion(Modos.Dificil);
-		Ficha ficha;
-		for (i = 0; i < resultado[0]; i++) {
-			ficha = new Ficha();
-			ficha.setColor(NEGRO + (char) 9210 + RESET);
-			respuesta.getCasillas()[i] = ficha;
+		Combinacion resultadoCombinacion = new Combinacion(Modos.Dificil);
+		Ficha ficha1;
+		Ficha ficha2;
+		Ficha ficha3;
+		
+		ficha1=new Ficha();
+		ficha1.setColor(NEGRO + (char) 9210 + RESET);
+		for(i = 0 ; i < resultado[0] ; i++) {
+			
+			resultadoCombinacion.getCasillas()[i] = ficha1;
 		}
-		while (i < resultado[0] + resultado[1]) {
-			ficha = new Ficha();
-			ficha.setColor(ROJO + (char) 9210 + RESET);
-			respuesta.getCasillas()[i] = ficha;
-			i++;
+		ficha2=new Ficha();
+		ficha2.setColor(ROJO + (char) 9210 + RESET);
+		for(i = resultado[0] ; i < (resultado[0] + resultado[1]) ; i++) {
+			
+			resultadoCombinacion.getCasillas()[i] = ficha2;
 		}
-		i = resultado[0] + resultado[1];
-		while (i < Modos.Dificil.getNumCasillas()) {
-			ficha = new Ficha();
-			ficha.setColor(BLANCO + (char) 9210 + RESET);
-			respuesta.getCasillas()[i] = ficha;
-			i++;
+		ficha3=new Ficha();
+		ficha3.setColor(BLANCO + (char) 9210 + RESET);
+		for(i = (resultado[0] + resultado[1]) ; i < resultadoCombinacion.getCasillas().length ; i++) {
+			
+			resultadoCombinacion.getCasillas()[i] = ficha3;
 		}
-		return respuesta;
+		
+		return resultadoCombinacion;
 	}
+
 }

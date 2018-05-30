@@ -41,8 +41,8 @@ public class TableroPartida implements Dibujable {
 	public String dibujar() {
 		String dibujo = "";
 		int i;
-		if ((tablero1.getTablero().size() > 3)) {
-			i = tablero1.getTablero().size() - 3;
+		if ((tablero1.getTablero().size() > 1)) {
+			i = tablero1.getTablero().size() - 1;
 		} else {
 			i = 0;
 		}
